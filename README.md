@@ -5,7 +5,7 @@
 
 **URL**: https://lovable.dev/projects/6251d526-6e5c-469c-9b70-fd9d55630828
 
-## How can I edit this codess?
+## How can I edit this codesszx?
 
 There are several ways of editing your application.
 
