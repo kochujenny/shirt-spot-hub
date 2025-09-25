@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import Header from '@/components/layout/Header';
 import HeroSection from '@/components/hero/HeroSection';
+import CategorySection from '@/components/sections/CategorySection';
+import SaleSection from '@/components/sections/SaleSection';
 import ProductFilters from '@/components/filters/ProductFilters';
 import ProductGrid from '@/components/product/ProductGrid';
 import ProductModal from '@/components/product/ProductModal';
@@ -47,14 +49,46 @@ const Index = () => {
     return filtered;
   }, [selectedCategory, sortBy]);
 
+  const handleShopNow = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewCollection = () => {
+    const categorySection = document.getElementById('categories');
+    if (categorySection) {
+      categorySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleShopSale = () => {
+    // Filter to show only discounted items
+    setSelectedCategory('All');
+    setSortBy('featured');
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header onCartClick={() => setIsCartOpen(true)} />
       
       <main>
-        <HeroSection />
+        <HeroSection onShopNow={handleShopNow} onViewCollection={handleViewCollection} />
         
-        <section className="container mx-auto px-4 py-16">
+        <CategorySection onCategorySelect={handleCategorySelect} />
+        
+        <SaleSection onShopSale={handleShopSale} />
+        
+        <section id="products" className="container mx-auto px-4 py-16">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4">Our T-Shirt Collection</h2>
             <p className="text-muted-foreground">

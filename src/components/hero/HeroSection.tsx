@@ -2,7 +2,12 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/tshirt-hero.jpg';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onShopNow: () => void;
+  onViewCollection: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onShopNow, onViewCollection }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
       <div className="container mx-auto px-4 py-16 lg:py-24">
@@ -22,10 +27,10 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-lg px-8" onClick={onShopNow}>
                 Shop Now
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" size="lg" className="text-lg px-8" onClick={onViewCollection}>
                 View Collection
               </Button>
             </div>

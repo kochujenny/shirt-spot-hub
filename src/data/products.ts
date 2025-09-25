@@ -5,6 +5,9 @@ import tshirt3 from '@/assets/tshirt-3.jpg';
 import tshirt4 from '@/assets/tshirt-4.jpg';
 import tshirt5 from '@/assets/tshirt-5.jpg';
 import tshirt6 from '@/assets/tshirt-6.jpg';
+import womenTshirt1 from '@/assets/women-tshirt-1.jpg';
+import womenTshirt2 from '@/assets/women-tshirt-2.jpg';
+import womenTshirt3 from '@/assets/women-tshirt-3.jpg';
 
 export const products: Product[] = [
   {
@@ -84,5 +87,47 @@ export const products: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Red', 'Burgundy', 'Orange'],
     discount: 23
+  },
+  {
+    id: '7',
+    name: 'Women\'s Fitted Pink Tee',
+    price: 26.99,
+    originalPrice: 35.99,
+    image: womenTshirt1,
+    rating: 4.8,
+    reviewCount: 94,
+    category: 'Women\'s Basic',
+    description: 'Soft and comfortable fitted t-shirt in beautiful pink color. Perfect for everyday wear with a flattering feminine cut.',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Pink', 'Rose', 'Coral'],
+    discount: 25
+  },
+  {
+    id: '8',
+    name: 'Women\'s Graphic Crop Tee',
+    price: 29.99,
+    originalPrice: 39.99,
+    image: womenTshirt2,
+    rating: 4.6,
+    reviewCount: 78,
+    category: 'Women\'s Graphic',
+    description: 'Trendy cropped t-shirt with stylish graphic design. Made from premium cotton blend for comfort and durability.',
+    sizes: ['XS', 'S', 'M', 'L'],
+    colors: ['White', 'Black', 'Gray'],
+    discount: 25
+  },
+  {
+    id: '9',
+    name: 'Women\'s Oversized Lavender Tee',
+    price: 31.99,
+    originalPrice: 41.99,
+    image: womenTshirt3,
+    rating: 4.7,
+    reviewCount: 112,
+    category: 'Women\'s Oversized',
+    description: 'Relaxed oversized fit in beautiful lavender color. Ultra-soft cotton fabric perfect for lounging or casual outings.',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Lavender', 'Mint', 'Peach'],
+    discount: 24
   }
 ];

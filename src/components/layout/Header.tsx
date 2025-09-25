@@ -29,16 +29,16 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#men" className="text-sm font-medium hover:text-primary transition-colors">
               Men
             </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#women" className="text-sm font-medium hover:text-primary transition-colors">
               Women
             </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#categories" className="text-sm font-medium hover:text-primary transition-colors">
               Categories
             </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#sale" className="text-sm font-medium hover:text-primary transition-colors">
               Sale
             </a>
           </nav>
