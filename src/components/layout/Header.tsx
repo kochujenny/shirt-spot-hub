@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
               <Menu className="h-5 w-5" />
             </Button>
             <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TeeShop
+              TeeByJ
             </h1>
           </div>
 
